@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { FormInput, FormLabel, FormValidationMessage } from "react-native-elements";
 
 class ElementsInput extends Component {
@@ -13,9 +13,12 @@ class ElementsInput extends Component {
         const { label, placeholder, error, ...rest } = this.props
         return (
             <View style={styles.container}>
-                <FormLabel>{label}</FormLabel>
-                <FormInput placeholder={placeholder} {...rest} />
-                <FormValidationMessage>{error}</FormValidationMessage>
+                <Text>{label}</Text>
+                {/* <FormLabel>{label}</FormLabel> */}
+                <TextInput placeholder={placeholder} {...rest} />
+                {/* <FormInput placeholder={placeholder} {...rest} /> */}
+                <Text>{error}</Text>
+                {/* <FormValidationMessage>{error}</FormValidationMessage> */}
             </View>
         );
     }
